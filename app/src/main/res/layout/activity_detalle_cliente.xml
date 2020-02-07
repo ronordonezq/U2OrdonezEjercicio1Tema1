@@ -41,8 +41,7 @@
             android:id="@+id/t_tipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sexo:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="Sexo:"/>
         <Spinner
             android:id="@+id/sexo"
             android:layout_width="wrap_content"
@@ -55,28 +54,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/sexo"
-            android:text="Dirección:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="Dirección:"/>
         <EditText
             android:id="@+id/txtdireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/t_direccion"
-            android:hint="dirección"
             android:inputType="textPostalAddress" />
 
         <TextView
             android:id="@+id/t_telefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefono:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="Telefono:"/>
         <EditText
             android:id="@+id/txttelefono"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/t_telefono"
-            android:hint="teléfono para contactar"
             android:inputType="phone" />
 
 
@@ -86,8 +81,7 @@
             android:layout_height="wrap_content"
             android:text="Editar"
             android:layout_marginTop="40dp"
-            android:textAlignment="center"
-            android:onClick="Editar"/>
+            android:textAlignment="center"/>
 
 
 </LinearLayout>
