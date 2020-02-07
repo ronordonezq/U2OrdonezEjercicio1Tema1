@@ -69,7 +69,7 @@ public class MiLogin extends AppCompatActivity {
   public void onLogin(View view) {
     int V = ValidaDatos(Login.getText().toString(), password.getText().toString());
     if (V == 0) {
-      //permiso de escritura o modificar
+
       editor = prefs.edit();
       editor.putBoolean("onlogin", true);
       editor.apply();

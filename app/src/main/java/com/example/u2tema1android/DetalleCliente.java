@@ -46,8 +46,9 @@ public class DetalleCliente extends AppCompatActivity {
         apellido = (EditText) findViewById(R.id.txtapellido);
         telefono = (EditText) findViewById(R.id.txttelefono);
         direccion = (EditText) findViewById(R.id.txtdireccion);
+        sexo = (Spinner) findViewById(R.id.sexo);
 
-        /*try {
+        try {
 
             URL url = new URL(this.getString(R.string.dominio) + this.getString(R.string.detallecliente) + codpersona);
             conexion = (HttpURLConnection) url.openConnection();
@@ -66,7 +67,6 @@ public class DetalleCliente extends AppCompatActivity {
             JSONArray json_array = new JSONArray(res);
             for (int i = 0; i < json_array.length(); i++) {
                 JSONObject objeto = json_array.getJSONObject(i);
-                //Clientes.add(new Cliente(objeto.getString("Cod_persona"), objeto.getString("Nombre"), objeto.getString("Apellidos")));
                 nombre.setText(objeto.getString("Nombre"));
                 apellido.setText(objeto.getString("Apellidos"));
                 telefono.setText(objeto.getString("celular"));
@@ -75,38 +75,9 @@ public class DetalleCliente extends AppCompatActivity {
         } catch (JSONException e) {
             Log.i("MI error", e.toString());
             e.printStackTrace();
-        }*/
+        }
 
     }
 
 
-   /* public ArrayList<Cliente> ListaCliente() {
-        ArrayList<Cliente> Clientes = new ArrayList<>();
-        try {
-            String miurl = this.getString(R.string.dominio) + this.getString(R.string.detallecliente) + codpersona;
-            URL url = new URL(miurl);
-            conexion = (HttpURLConnection) url.openConnection();
-            if (conexion.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
-                String linea = reader.readLine();
-                res = linea;
-                JSONArray json_array = new JSONArray(res);
-                for (int i = 0; i < json_array.length(); i++) {
-                    JSONObject objeto = json_array.getJSONObject(i);
-                    Clientes.add(new Cliente((objeto.getString("Cod_persona")), objeto.getString("Nombre"), objeto.getString("Apellidos")));
-                    nombre.setText(objeto.getString("Nombre"));
-                    apellido.setText(objeto.getString("Apellidos"));
-                    telefono.setText(objeto.getString("celular"));
-                    direccion.setText(objeto.getString("Domicilio"));
-                }
-            } else {
-                Log.e("mierror", conexion.getResponseMessage());
-            }
-        } catch (Exception e) {
-
-        } finally {
-            if (conexion != null) conexion.disconnect();
-        }
-        return Clientes;
-    }*/
 }

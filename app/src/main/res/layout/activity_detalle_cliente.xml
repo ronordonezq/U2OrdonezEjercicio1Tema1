@@ -5,9 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:paddingTop="20dp"
     android:layout_margin="20dp">
 
+        <TextView
+            android:id="@+id/tv_codcliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Codigo : "/>
         <TextView
             android:id="@+id/t_nombre"
             android:layout_width="wrap_content"
@@ -63,7 +69,6 @@
             android:id="@+id/t_telefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtdireccion"
             android:text="Telefono:"
             android:textAppearance="?android:attr/textAppearanceMedium" />
         <EditText
@@ -74,17 +79,14 @@
             android:hint="teléfono para contactar"
             android:inputType="phone" />
 
-        <TextView
-            android:id="@+id/tv_codcliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Codigo : "/>
 
     <Button
             android:id="@+id/btnac"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Editar"
+            android:layout_marginTop="40dp"
+            android:textAlignment="center"
             android:onClick="Editar"/>
 
 
